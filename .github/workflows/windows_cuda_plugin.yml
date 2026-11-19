@@ -142,7 +142,7 @@ jobs:
           submodules: 'none'
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: cuda-plugin-build-artifacts
           path: ${{ runner.temp }}\build
