@@ -42,14 +42,14 @@ jobs:
           node-version: 20
 
       - name: Setup CCache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           # Fully qualify by workflow. `actions/cache` does not isolate by workflow, unlike ADO cache actions.
           key: ccache | linux_minimal_build.yml | build_full_ort
           path: ~/.cache/ccache
 
       - name: Setup VCPKG Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           # ostensibly should be able to use the same cache for most of these, but in practice the hash does not match.
           key: vcpkg-cache | linux_minimal_build.yml | build_full_ort
@@ -99,13 +99,13 @@ jobs:
           node-version: 20
 
       - name: Setup CCache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: ccache | linux_minimal_build.yml | build_minimal_exceptions_disabled
           path: ~/.cache/ccache
 
       - name: Setup VCPKG Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: vcpkg-cache | linux_minimal_build.yml | build_minimal_exceptions_disabled
           path: ~/.cache/vcpkg
@@ -177,13 +177,13 @@ jobs:
           node-version: 20
 
       - name: Setup CCache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: ccache | linux_minimal_build.yml | build_minimal_custom_ops
           path: ~/.cache/ccache
 
       - name: Setup VCPKG Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: vcpkg-cache | linux_minimal_build.yml | build_minimal_custom_ops
           path: ~/.cache/vcpkg
@@ -230,13 +230,13 @@ jobs:
           node-version: 20
 
       - name: Setup CCache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: ccache | linux_minimal_build.yml | build_minimal_type_reduction
           path: ~/.cache/ccache
 
       - name: Setup VCPKG Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: vcpkg-cache | linux_minimal_build.yml | build_minimal_type_reduction
           path: ~/.cache/vcpkg
@@ -282,13 +282,13 @@ jobs:
           node-version: 20
 
       - name: Setup CCache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: ccache | linux_minimal_build.yml | build_minimal_globally_allowed_types
           path: ~/.cache/ccache
 
       - name: Setup VCPKG Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: vcpkg-cache | linux_minimal_build.yml | build_minimal_globally_allowed_types
           path: ~/.cache/vcpkg
@@ -335,13 +335,13 @@ jobs:
           node-version: 20
 
       - name: Setup CCache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: ccache | linux_minimal_build.yml | build_extended_minimal
           path: ~/.cache/ccache
 
       - name: Setup VCPKG Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: vcpkg-cache | linux_minimal_build.yml | build_extended_minimal
           path: ~/.cache/vcpkg
@@ -437,13 +437,13 @@ jobs:
           touch ${{ runner.temp }}/.test_data/include_no_operators.config
 
       - name: Setup CCache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: ccache | linux_minimal_build.yml | build_regular_no_optional
           path: ~/.cache/ccache
 
       - name: Setup VCPKG Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: vcpkg-cache | linux_minimal_build.yml | build_regular_no_optional
           path: ~/.cache/vcpkg
@@ -536,13 +536,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup CCache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: ccache | linux_minimal_build.yml | build_minimal_no_optional
           path: ~/.cache/ccache
 
       - name: Setup VCPKG Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: vcpkg-cache | linux_minimal_build.yml | build_minimal_no_optional
           path: ~/.cache/vcpkg
@@ -630,13 +630,13 @@ jobs:
           touch ${{ runner.temp }}/.test_data/include_no_operators.config
 
       - name: Setup CCache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: ccache | linux_minimal_build.yml | build_extended_minimal_no_optional
           path: ~/.cache/ccache
 
       - name: Setup VCPKG Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: vcpkg-cache | linux_minimal_build.yml | build_extended_minimal_no_optional
           path: ~/.cache/vcpkg
@@ -728,13 +728,13 @@ jobs:
           # Use default android-sdk-root if not specified
 
       - name: Setup CCache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: ccache | linux_minimal_build.yml | build_extended_minimal_android
           path: ~/.cache/ccache
 
       - name: Setup VCPKG Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: vcpkg-cache | linux_minimal_build.yml | build_extended_minimal_android
           path: ~/.cache/vcpkg
